@@ -1,0 +1,17 @@
+{
+    "name": "marek/dccs-workshop",
+    "require": {
+        "symfony/http-foundation": "^3.0",
+        "symfony/var-dumper": "^3.0",
+        "symfony/http-kernel": "^3.0",
+        "symfony/routing": "^3.0",
+        "symfony/config": "^3.0",
+        "symfony/yaml": "^3.0",
+        "twig/twig": "^1.24",
+        "symfony/dependency-injection": "^3.0",
+        "symfony/console": "^3.0"
+    },
+    "autoload": {
+        "psr-0": { "": "src/" }
+    }
+}

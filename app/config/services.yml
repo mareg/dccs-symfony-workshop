@@ -1,0 +1,27 @@
+parameters:
+    twig.paths: ../app/Resources/views
+
+services:
+    twig.template_loader:
+        class:     Twig_Loader_Filesystem
+        arguments: ['%twig.paths%']
+
+    twig.renderer:
+        class:     Twig_Environment
+        arguments: ['@twig.template_loader']
+
+    mareg.calculator:
+        class:     Mareg\Calculator\Calculator
+        arguments: []
+
+    mareg.calculator.add.command:
+        class: Mareg\Console\Command\CalculatorAddCommand
+        arguments: ['@mareg.calculator']
+        tags:
+            -  { name: console.command }
+
+    mareg.calculator.sub.command:
+        class: Mareg\Console\Command\CalculatorSubCommand
+        arguments: ['@mareg.calculator']
+        tags:
+            -  { name: console.command }

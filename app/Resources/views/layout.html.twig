@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+  <header>{% block header %}{% endblock %}</header>
+  <article>{% block content %}{% endblock %}</article>
+  <footer>
+    {% block footer %}
+      &copy; 2016 <a href="/">My Awesome website</a>
+    {% endblock %}
+  </footer>
+{% endblock %}

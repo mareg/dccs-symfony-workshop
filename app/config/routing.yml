@@ -1,0 +1,13 @@
+authors:
+    path:     /authors
+    defaults: { _controller: 'AuthorController::indexAction' }
+
+create_author:
+    path:     /author
+    defaults: { _controller: 'AuthorController::createAction' }
+    methods:  [POST]
+
+get_author:
+    path:     /author/{id}
+    defaults: { _controller: 'AuthorController::getAction' }
+    methods:  [GET]

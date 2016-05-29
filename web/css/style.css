@@ -1,0 +1,13 @@
+
+html {
+	font-family: "Roboto", sans-serif;
+	background: #eee;
+}
+
+body {
+	width: 75%;
+	margin: 20px auto;
+	padding: 20px;
+	background: #fff;
+	box-shadow: 4px 4xp 16px 16px #000;
+}

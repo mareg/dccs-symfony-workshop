@@ -1,0 +1,13 @@
+{% extends 'layout.html.twig' %}
+
+{% block header %}
+<h1>Hello from the other side...</h1>
+{% endblock %}
+
+{% block content %}
+{% if operations|length > 0 %}
+{% for key, operation in operations %}
+<p><tt>Calculator::{{ key }}({{ operation.arguments[0] ~ ', ' ~ operation.arguments[1] }}) -> {{ operation.result }}</p>
+{% endfor %}
+{% endif %}
+{% endblock %}
